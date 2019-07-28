@@ -1,3 +1,5 @@
+# Probability Weighted Word Saliency(PWWS)
+
 This repository contains Keras implementations of the ACL2019 paper [Generating Natural Language Adversarial Examples through Probability Weighted Word Saliency](https://www.aclweb.org/anthology/P19-1103).
 
 ## Overview
@@ -26,6 +28,18 @@ This repository contains Keras implementations of the ACL2019 paper [Generating 
 * Run`evaluate_fool_reaults.py`to evaluate adversarial examples. 
 * If you want to train or fool different models, reset the argument in `training.py`and`fool.py`.
 ### Result on pretrained model
+
+`runs/`contains some pretrained NN models, the information of these models are showed as the following table. 
+
+We use these pretrained models to generate 1000 adversarial examples with PWWS.
+
+- `test_set` means classification accuracy on test set.
+- `clean_1000` means classification accuracy on the 1000 clean samples(from test set).
+- `adv_1000` means classification accuracy on the adversarial examples corresponding to the 1000 clean samples.
+- `sub_rate` means word replacement rate defined in `Section 4.4`.
+- `NE_rate` means  (number of $NE_{adv}$)/(number of substitute word).
+
+If you want to use this model, rename the them or modify the paths to model in the `.py` files.
 
 | data_set       | neural_network | test_set | clean_1000 | adv_1000  | sub_rate | NE_rate |
 | -------------- | -------------- | -------- | ---------- | --------- | -------- | ------- |
