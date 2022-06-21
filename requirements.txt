@@ -2,7 +2,7 @@ spacy==2.1.4
 Keras==2.2.4
 nltk==3.4.5
 pandas==0.23.4
-numpy==1.15.4
+numpy==1.22.0
 tensorflow==1.15.2
 attrs==18.2.0
 attr==0.3.1
